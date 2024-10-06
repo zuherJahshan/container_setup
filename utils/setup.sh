@@ -33,3 +33,5 @@ rm -rf ~/.config/nvim/.git
 # copy the copilot.lua file to the correct location
 mkdir -p ~/.config/nvim/lua/plugins/
 cp copilot.lua ~/.config/nvim/lua/plugins/
+
+cp keymaps.lua ~/.config/nvim/lua/config/
