@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  pytorch-dev:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "2222:22"  # SSH port
+    volumes:
+      - ../../:/workspace  # Mount the current directory to /workspace in the container
+      - /shared_data:/shared_data  # Mount the shared_data directory to /shared_data in the container
+    environment:
+      - TZ=Asia/Jerusalem
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    runtime: nvidia
+    container_name: zj_pytorch_dev_container
+    image: zj_pytorch_dev_image
+    shm_size: '4g'  # Set shared memory size
