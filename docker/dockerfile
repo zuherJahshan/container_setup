@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y \
     libxres-dev \
     xclip \
     locales \
+    fzf \
     ruby-dev
     # && rm -rf /var/lib/apt/lists/*
 
