@@ -19,11 +19,11 @@ sudo locale-gen en_US en_US.UTF-8
 # Install latest version of neovim
 mkdir -p ~/downloads
 pushd ~/downloads
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf nvim-linux64.tar.gz
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 # Add this export to the ~/.bashrc file
-echo export PATH="$PATH:/opt/nvim-linux64/bin" >>~/.bashrc
+echo export PATH="$PATH:/opt/nvim-linux-x86_64/bin" >>~/.bashrc
 popd
 
 # Download lazyvim
