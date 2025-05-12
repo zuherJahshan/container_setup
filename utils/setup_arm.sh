@@ -32,7 +32,7 @@ curl -LO https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-a
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-arm64.tar.gz
 # Add this export to the ~/.bashrc file
-echo export PATH="$PATH:/opt/nvim-linux-arm64/bin" >>~/.bashrc
+echo 'export PATH=$PATH:/opt/nvim-linux-arm64/bin' >> ~/.bashrc
 popd
 # Download lazyvim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
