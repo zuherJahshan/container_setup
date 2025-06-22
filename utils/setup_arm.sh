@@ -5,10 +5,6 @@ if [ -f init.vim ]; then
   cp init.vim ~/.config/nvim/init.vim
 fi
 
-sudo mv /usr/bin/curl /usr/bin/curl-original
-sudo bash -c 'echo -e "#!/bin/sh\nexec /usr/bin/curl-original -k \"\$@\"" > /usr/bin/curl'
-sudo chmod +x /usr/bin/curl
-
 mkdir -p ~/downloads
 pushd ~/downloads
 curl -O https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-arm64.tar.xz
